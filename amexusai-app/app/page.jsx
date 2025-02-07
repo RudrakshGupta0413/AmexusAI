@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar"
 import Hero from "@/components/hero"
 import Mockup from "@/components/mockup"
+import Slide2 from "@/components/slide2"
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Mockup />
+        <Slide2 />
       </div>
     </main>
   )
