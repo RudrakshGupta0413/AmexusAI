@@ -2,6 +2,8 @@ import Navbar from "@/components/navbar"
 import Hero from "@/components/hero"
 import Mockup from "@/components/mockup"
 import Slide2 from "@/components/slide2"
+import Slide3 from "@/components/slide3"
+import Slide4 from "@/components/slide4"
 
 export default function Home() {
   return (
@@ -19,6 +21,8 @@ export default function Home() {
         <Hero />
         <Mockup />
         <Slide2 />
+        <Slide3 />
+        <Slide4 />
       </div>
     </main>
   )

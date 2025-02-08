@@ -26,38 +26,39 @@ const slide2 = () => {
   ]
 
   return (
-    <div className="h-screen bg-[#0A0F1D] text-white flex flex-col">
-      
-
+    <div className="h-screen bg-[#0D111D] text-white flex flex-col">
       {/* Main Content */}
       <main className="flex-grow flex items-center px-8">
         <div className="w-full max-w-7xl mx-auto grid grid-cols-2 gap-8">
           {/* Left Column: Features */}
-          <div className="space-y-8 relative">
-            <h1 className="text-3xl font-bold mb-8">Unlock AI's Full Potential in Your Business</h1>
+          <div className="relative">
+            <h1 className="text-3xl font-bold mb-16">Unlock AI's Full Potential in Your Business</h1>
 
-            {/* Single long radio button indicator */}
-            <div className="absolute left-0 top-16 bottom-0 w-1 bg-gray-600 rounded-full">
-              <motion.div
-                className="absolute w-full h-[4.5rem] bg-green-500 rounded-full"
-                animate={{
-                  top: `${selectedFeature * 5.5}rem`,
-                }}
-                transition={{
-                  type: "spring",
-                  stiffness: 300,
-                  damping: 30,
-                }}
-              />
-            </div>
+            <div className="relative">
+              {/* Feature Items Container */}
+              <div className="space-y-0">
+                {features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="relative pl-8 cursor-pointer group"
+                    onClick={() => setSelectedFeature(index)}
+                  >
+                    {/* Radio button indicator */}
+                    <div
+                      className={`absolute left-0 top-0 w-1 h-full ${
+                        selectedFeature === index ? "bg-green-400" : "bg-gray-700"
+                      } transition-colors duration-300`}
+                    />
 
-            {/* Feature Items */}
-            {features.map((feature, index) => (
-              <div key={index} className="pl-6 cursor-pointer" onClick={() => setSelectedFeature(index)}>
-                <h3 className="text-lg font-semibold mb-2 text-white">{feature.title}</h3>
-                <p className="text-sm leading-relaxed text-gray-400">{feature.description}</p>
+                    {/* Content with consistent padding */}
+                    <div className="py-6">
+                      <h3 className="text-lg font-semibold mb-2 text-white">{feature.title}</h3>
+                      <p className="text-sm leading-relaxed text-gray-400">{feature.description}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
 
           {/* Right Column: Preview Area */}
