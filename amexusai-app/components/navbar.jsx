@@ -23,7 +23,7 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-          <Button className="bg-[#4CAF50] hover:bg-[#45a049] text-white">Book Demo</Button>
+          <Button className="bg-gradient-to-r from-[#4CAF50] to-[#A4D03C] hover:opacity-90 text-white">Book Demo</Button>
         </div>
       </div>
     </nav>
