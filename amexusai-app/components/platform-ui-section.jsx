@@ -21,24 +21,31 @@ export default function PlatformSection() {
   const [activeTab, setActiveTab] = useState("health");
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-16 relative">
+    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-16">
       <div className="max-w-6xl mx-auto w-full">
         <div className="flex justify-center gap-4 mb-12">
-          <Button
-            variant="outline"
-            className={cn("border-[#4CAF50] text-[#4CAF50] rounded-3xl px-6 py-5", activeTab === "health" && "bg-[#4CAF50] text-white rounded-3xl px-6 py-5")}
+          <button
             onClick={() => setActiveTab("health")}
+            className={cn(
+              "px-6 py-3 rounded-full transition-all duration-300 text-base",
+              activeTab === "health"
+                ? "gradient-border-active glow-effect font-medium"
+                : "text-gray-400 hover:text-gray-300 bg-[#171b26] hover:bg-[#1f2937]",
+            )}
           >
-            <HeartPulse size={20} /> Health Care
-          </Button>
-          <Button
-            variant="outline"
-            className={cn("border-[#4CAF50] text-[#4CAF50] rounded-3xl px-6 py-5", activeTab === "marketing" && "bg-[#4CAF50] text-white rounded-3xl px-6 py-5")}
+            <span className={activeTab === "health" ? "gradient-text" : ""}>Health Care</span>
+          </button>
+          <button
             onClick={() => setActiveTab("marketing")}
+            className={cn(
+              "px-6 py-3 rounded-full transition-all duration-300 text-base",
+              activeTab === "marketing"
+                ? "gradient-border-active glow-effect font-medium"
+                : "text-gray-400 hover:text-gray-300 bg-[#171b26] hover:bg-[#1f2937]",
+            )}
           >
-            
-           <Megaphone size={20} /> Marketing
-          </Button>
+            <span className={activeTab === "marketing" ? "gradient-text" : ""}>Marketing</span>
+          </button>
         </div>
 
         <div className="relative">

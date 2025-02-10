@@ -14,16 +14,16 @@ export default function Navbar() {
             </Link>
             <div className="hidden md:block ml-10">
               <div className="flex items-center space-x-8">
-                <Link href="/solution" className="text-gray-300 hover:text-white">
+                <Link href="#" className="text-gray-300 hover:text-white">
                   Solution
                 </Link>
-                <Link href="/team" className="text-gray-300 hover:text-white">
+                <Link href="#" className="text-gray-300 hover:text-white">
                   Our Team
                 </Link>
               </div>
             </div>
           </div>
-          <Button className="bg-gradient-to-r from-[#4CAF50] to-[#A4D03C] hover:opacity-90 text-white">Book Demo</Button>
+          {/* <Button className="bg-gradient-to-r from-[#4CAF50] to-[#A4D03C] hover:opacity-90 text-white">Book Demo</Button> */}
         </div>
       </div>
     </nav>

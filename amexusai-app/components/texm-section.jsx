@@ -7,7 +7,7 @@ export default function TeamSection() {
       position: "Founder",
       image:
         "/Amit_Gurawa.png",
-      bgColor: "bg-[#1E3B2C]",
+      gradient: "bg-gradient-to-l from-[#1a2e1b] to-[#2f3d21]",
       socials: {
         twitter: "https://twitter.com",
         linkedin: "https://linkedin.com",
@@ -19,7 +19,7 @@ export default function TeamSection() {
       position: "Founder",
       image:
         "/Amit_Gurawa.png",
-      bgColor: "bg-[#6B4536]",
+      gradient: "bg-gradient-to-l from-[#3a1f1f] to-[#4b2e2e]",
       socials: {
         twitter: "https://twitter.com",
         linkedin: "https://linkedin.com",
@@ -31,7 +31,7 @@ export default function TeamSection() {
       position: "Founder",
       image:
         "/Amit_Gurawa.png",
-      bgColor: "bg-[#1B4D4E]",
+      gradient: "bg-gradient-to-l from-[#1c2b35] to-[#2d3f4a]",
       socials: {
         twitter: "https://twitter.com",
         linkedin: "https://linkedin.com",
@@ -56,7 +56,7 @@ export default function TeamSection() {
               name={member.name}
               position={member.position}
               image={member.image}
-              bgColor={member.bgColor}
+              gradient={member.gradient}
               socials={member.socials}
             />
           ))}
