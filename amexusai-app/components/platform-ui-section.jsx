@@ -2,9 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { HeartPulse, Megaphone } from "lucide-react";
 
 const mockupData = {
   health: {
@@ -21,9 +19,9 @@ export default function PlatformSection() {
   const [activeTab, setActiveTab] = useState("health");
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-16">
+    <section className="min-h-[75vh] md:min-h-screen flex flex-col items-center justify-center px-4 py-10 md:py-16">
       <div className="max-w-6xl mx-auto w-full">
-        <div className="flex justify-center gap-4 mb-12">
+        <div className="flex justify-center gap-4 mb-8 md:mb-12">
           <button
             onClick={() => setActiveTab("health")}
             className={cn(
@@ -50,7 +48,7 @@ export default function PlatformSection() {
 
         <div className="relative">
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <h2 className="text-4xl font-bold text-white/10">UI Of platform</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white/10">UI Of Platform</h2>
           </div>
           <Image
             src={mockupData[activeTab].image || "/placeholder.svg"}
@@ -62,7 +60,7 @@ export default function PlatformSection() {
         </div>
       </div>
       {/* Gradient overlay for smooth transition */}
-      <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-b from-transparent to-[#0A0F1D] pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-48 md:h-64 bg-gradient-to-b from-transparent to-[#0A0F1D] pointer-events-none"></div>
     </section>
   );
 }

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 
 export default function Footer() {
@@ -7,8 +8,8 @@ export default function Footer() {
         {/* Desktop Layout */}
         <div className="hidden md:flex justify-between items-center">
           <div>
-            <Link href="/" className="text-[#4CAF50] text-2xl font-bold">
-              AMEXUS AI
+            <Link href="/">
+              <Image src="/Logo.png" alt="Amexus AI" width={150} height={50} />
             </Link>
             <p className="text-gray-400 mt-1">Bridging Business with AI</p>
           </div>
@@ -18,6 +19,12 @@ export default function Footer() {
             </Link>
             <Link href="#" className="text-gray-300 hover:text-white">
               Our Team
+            </Link>
+            <Link href="#" className="text-gray-300 hover:text-white">
+              Contact Us
+            </Link>
+            <Link href="#" className="text-gray-300 hover:text-white">
+              FAQ
             </Link>
           </div>
         </div>
@@ -34,6 +41,12 @@ export default function Footer() {
             </Link>
             <Link href="#" className="text-gray-300 hover:text-white text-sm">
               Our Team
+            </Link>
+            <Link href="#" className="text-gray-300 hover:text-white text-sm">
+              Contact Us
+            </Link>
+            <Link href="#" className="text-gray-300 hover:text-white text-sm">
+              FAQ
             </Link>
           </div>
         </div>
