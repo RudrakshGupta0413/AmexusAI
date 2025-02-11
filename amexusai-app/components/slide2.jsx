@@ -21,17 +21,17 @@ const features = [
     title: "Smart Lead Generation",
     description:
       "Efficiently collect and organize data to identify and qualify high-potential leads, boosting conversion rates",
-    gif: "/placeholder.svg?height=400&width=400",
+    gif: "https://media.giphy.com/media/l0HlNaQ6gWfllcjDO/giphy.gif",
   },
   {
     title: "Real-time Virtual Assistance",
     description: "Enable user with seamless responses to conversational prompts",
-    gif: "/placeholder.svg?height=400&width=400",
+    gif: "https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif",
   },
   {
     title: "Best-in-class Data Security",
     description: "Ensure end-to-end encoding and masking for sensitive user data.",
-    gif: "/placeholder.svg?height=400&width=400",
+    gif: "https://media.giphy.com/media/3oKIPavn7vUxWFjTqw/giphy.gif",
   },
 ]
 
