@@ -58,7 +58,7 @@ const slide4 = () => {
   }
 
   return (
-    <section className="min-h-screen bg-[#0A0C10] py-20 px-4">
+    <section className="min-h-screen bg-[#171B26] py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -81,7 +81,7 @@ const slide4 = () => {
           viewport={{ once: true }}
         >
           {steps.map((step, index) => (
-            <motion.div key={index} variants={itemVariants} className="bg-[#161923] rounded-2xl p-8 flex flex-col">
+            <motion.div key={index} variants={itemVariants} className="bg-[#0D111D] rounded-2xl p-8 flex flex-col">
               <div className="text-[4rem] font-bold mb-6 leading-none" style={gradientStyle}>
                 {step.number}
               </div>
