@@ -19,16 +19,16 @@ export default function Navbar() {
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#" className="text-gray-300 hover:text-white">
+            <Link href="#" className="text-[#BFBFBF] hover:text-white">
               Solution
             </Link>
-            <Link href="#" className="text-gray-300 hover:text-white">
+            <Link href="#" className="text-[#BFBFBF] hover:text-white">
               Our Team
             </Link>
-            <Link href="#" className="text-gray-300 hover:text-white">
+            <Link href="#" className="text-[#BFBFBF] hover:text-white">
               Contact Us
             </Link>
-            <Link href="#" className="text-gray-300 hover:text-white">
+            <Link href="#" className="text-[#BFBFBF] hover:text-white">
               FAQ
             </Link>
           </div>
@@ -45,17 +45,17 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-[#0A0F1D] w-full py-4 px-6 space-y-4 absolute top-16 left-0 flex flex-col items-center space-y-6 shadow-md">
-          <Link href="#" className="block text-gray-300 hover:text-white">
+        <div className="md:hidden bg-[#0A0F1D] w-full py-4 px-6 absolute top-16 left-0 flex flex-col items-center space-y-6 shadow-md">
+          <Link href="#" className="block text-[#BFBFBF] hover:text-white">
             Solution
           </Link>
-          <Link href="#" className="block text-gray-300 hover:text-white">
+          <Link href="#" className="block text-[#BFBFBF] hover:text-white">
             Our Team
           </Link>
-          <Link href="#" className="block text-gray-300 hover:text-white">
+          <Link href="#" className="block text-[#BFBFBF] hover:text-white">
             Contact Us
           </Link>
-          <Link href="#" className="block text-gray-300 hover:text-white">
+          <Link href="#" className="block text-[#BFBFBF] hover:text-white">
             FAQ
           </Link>
         </div>

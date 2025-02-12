@@ -17,7 +17,7 @@ export default function AnimatedText() {
   }, [])
 
   return (
-    <div className="relative w-[320px] h-[1.2em] overflow-hidden">
+    <div className="relative w-[380px] h-[1.2em] overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={words[index]}
