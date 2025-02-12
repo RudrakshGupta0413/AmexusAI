@@ -1,6 +1,12 @@
 "use client"
 import { getCLS, getFID, getLCP } from 'web-vitals';
 import { AnimatedStat } from "./animatedstat"
+import { Roboto_Slab, Fira_Code } from "next/font/google"
+
+const robotoSlab = Roboto_Slab({
+  subsets: ["latin"],
+  display: "swap",
+})
 
 const Slide3 = () => {
   const stats = [
@@ -13,7 +19,7 @@ const Slide3 = () => {
   return (
     <section className="min-h-screen bg-[#0D111D] py-8 md:py-16 px-4">
       <div className="max-w-6xl mx-auto text-center">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-4 font-mono">
+        <h1 className={`text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-3 md:mb-4 ${robotoSlab.className}`}>
           Achieve Tangible Results
           <br className="hidden sm:block" /> with Amexus AI
         </h1>
@@ -30,8 +36,8 @@ const Slide3 = () => {
         <div className="mt-8 md:mt-16">
           <a
             href="#book-demo"
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#2E8B57] to-[#9ACD32] 
-            hover:from-[#247346] hover:to-[#89BC21] text-white font-semibold rounded-lg transition-all duration-300 font-mono"
+            className={`inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#2E8B57] to-[#9ACD32] 
+              hover:from-[#247346] hover:to-[#89BC21] text-white font-semibold rounded-lg transition-all duration-300 ${robotoSlab.className}`}
           >
             Book Demo
             <svg

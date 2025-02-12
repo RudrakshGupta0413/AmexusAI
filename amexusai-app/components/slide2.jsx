@@ -18,9 +18,9 @@ const firaCode = Fira_Code({
 
 const features = [
   {
-    title: "Smart Lead Generation",
+    title: "Expert Validated Results",
     description:
-      "Efficiently collect and organize data to identify and qualify high-potential leads, boosting conversion rates",
+      "Inter-application automation with expert led validation",
     gif: "https://media.giphy.com/media/l0HlNaQ6gWfllcjDO/giphy.gif",
   },
   {
@@ -122,7 +122,7 @@ export default function Slide2() {
                   aria-pressed={selectedFeature === index}
                 >
                   <div className="py-6">
-                    <h3 className={`text-xl font-normal mb-2 md:whitespace-nowrap ${robotoSlab.className}`}>
+                    <h3 className={`text-xl font-bold mb-2 md:whitespace-nowrap ${robotoSlab.className}`}>
                       {feature.title}
                     </h3>
                     <p className="text-gray-400 leading-relaxed text-sm">{feature.description}</p>

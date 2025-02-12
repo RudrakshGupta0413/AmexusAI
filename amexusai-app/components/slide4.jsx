@@ -1,5 +1,11 @@
 "use client"
 import { motion } from "framer-motion"
+import { Roboto_Slab, Fira_Code } from "next/font/google"
+
+const robotoSlab = Roboto_Slab({
+  subsets: ["latin"],
+  display: "swap",
+})
 
 const slide4 = () => {
   const gradientStyle = {
@@ -67,7 +73,7 @@ const slide4 = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">How Amexus AI Transforms Your Business</h2>
+          <h2 className={`text-4xl md:text-5xl font-normal text-white mb-6 ${robotoSlab.className}`}>How Amexus AI Transforms Your Business</h2>
           <p className="text-lg md:text-xl text-gray-400 font-mono">
             Effortlessly integrate AI into your workflow with just a few easy steps.
           </p>
@@ -85,8 +91,8 @@ const slide4 = () => {
               <div className="text-[4rem] font-bold mb-6 leading-none" style={gradientStyle}>
                 {step.number}
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">{step.title}</h3>
-              <p className="text-gray-400 font-mono text-sm leading-relaxed">{step.description}</p>
+              <h3 className={`text-xl font-normal text-white mb-4 ${robotoSlab.className}`}>{step.title}</h3>
+              <p className={`text-gray-400 font-mono text-sm leading-relaxed italic`}>{step.description}</p>
             </motion.div>
           ))}
         </motion.div>
