@@ -39,11 +39,10 @@ export default function Home() {
       <div className="relative z-10">
         <Navbar />
         <HeroSection />
+        <PlatformSection />
         <Slide2 />
         <Slide3 />
         <Slide4 />
-        <HeroSection />
-        <PlatformSection />
       </div>
       <div className="bg-[#0A0F1D] relative z-20">
         <TeamSection />
