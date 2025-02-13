@@ -10,7 +10,7 @@ export default function ContactSection() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center px-4 py-20">
+    <div id="contact" className="min-h-[90vh] flex flex-col justify-center items-center px-4 py-20">
       {/* Main Container */}
       <div className="w-full max-w-[1550px] mx-auto">
         <div className="bg-[#171b26] rounded-3xl p-6 md:p-12 lg:p-16 flex flex-col md:grid md:grid-cols-2 gap-12 items-center">

@@ -1,36 +1,45 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false); 
+    }
+  };
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#0A0F1D]/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo on the Left */}
-          <Link href="/">
+          <a href="/">
             <Image src="/Logo.png" width={150} height={50} alt="Amexus AI" />
-          </Link>
+          </a>
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#" className="text-[#BFBFBF] hover:text-white">
+            <button onClick={() => handleScroll("solution")} className="text-[#BFBFBF] hover:text-white">
               Solution
-            </Link>
-            <Link href="#" className="text-[#BFBFBF] hover:text-white">
+            </button>
+            <button onClick={() => handleScroll("team")} className="text-[#BFBFBF] hover:text-white">
               Our Team
-            </Link>
-            <Link href="#" className="text-[#BFBFBF] hover:text-white">
+            </button>
+            <button onClick={() => handleScroll("contact")} className="text-[#BFBFBF] hover:text-white">
               Contact Us
-            </Link>
-            <Link href="#" className="text-[#BFBFBF] hover:text-white">
+            </button>
+
+             {/* Connect FAQ once all the pages are merger */ }
+            <button onClick={() => handleScroll("faq")} className="text-[#BFBFBF] hover:text-white">
               FAQ
-            </Link>
+            </button>
           </div>
 
           {/* Mobile Hamburger Menu */}
@@ -46,18 +55,20 @@ export default function Navbar() {
       {/* Mobile Menu Dropdown */}
       {isOpen && (
         <div className="md:hidden bg-[#0A0F1D] w-full py-4 px-6 absolute top-16 left-0 flex flex-col items-center space-y-6 shadow-md">
-          <Link href="#" className="block text-[#BFBFBF] hover:text-white">
+          <button onClick={() => handleScroll("solution")} className="block text-[#BFBFBF] hover:text-white">
             Solution
-          </Link>
-          <Link href="#" className="block text-[#BFBFBF] hover:text-white">
+          </button>
+          <button onClick={() => handleScroll("team")} className="block text-[#BFBFBF] hover:text-white">
             Our Team
-          </Link>
-          <Link href="#" className="block text-[#BFBFBF] hover:text-white">
+          </button>
+          <button onClick={() => handleScroll("contact")} className="block text-[#BFBFBF] hover:text-white">
             Contact Us
-          </Link>
-          <Link href="#" className="block text-[#BFBFBF] hover:text-white">
+          </button>
+
+          {/* Connect FAQ once all the pages are merger */ }
+          <button onClick={() => handleScroll("faq")} className="block text-[#BFBFBF] hover:text-white">
             FAQ
-          </Link>
+          </button>
         </div>
       )}
     </nav>

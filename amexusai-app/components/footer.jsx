@@ -11,42 +11,30 @@ export default function Footer() {
             <Link href="/">
               <Image src="/Logo.png" alt="Amexus AI" width={150} height={50} />
             </Link>
-            <p className="text-gray-400 mt-1">Bridging Business with AI</p>
+            <p className="text-[#FFFFFF] mt-1">Bridging Business with AI</p>
           </div>
           <div className="flex gap-8">
-            <Link href="#" className="text-gray-300 hover:text-white">
-              Solution
+            <Link href="#" className="text-[#BFBFBF] hover:text-white">
+              Privacy Policy
             </Link>
-            <Link href="#" className="text-gray-300 hover:text-white">
-              Our Team
-            </Link>
-            <Link href="#" className="text-gray-300 hover:text-white">
-              Contact Us
-            </Link>
-            <Link href="#" className="text-gray-300 hover:text-white">
-              FAQ
+            <Link href="#" className="text-[#BFBFBF] hover:text-white">
+              Terms of Use
             </Link>
           </div>
         </div>
 
         {/* Mobile Layout */}
         <div className="md:hidden flex flex-col items-center space-y-4">
-          <Link href="/" className="text-[#4CAF50] text-xl font-bold">
-            AMEXUS
-          </Link>
-          <p className="text-gray-400 text-sm">Bridging Business with AI</p>
+        <Link href="/">
+              <Image src="/Logo.png" alt="Amexus AI" width={150} height={50} />
+            </Link>
+          <p className="text-[#FFFFFF] text-MD">Bridging Business with AI</p>
           <div className="flex gap-6 mt-2">
-            <Link href="#" className="text-gray-300 hover:text-white text-sm">
-              Solution
+            <Link href="#" className="text-[#BFBFBF] hover:text-white text-sm">
+              Privacy Policy
             </Link>
-            <Link href="#" className="text-gray-300 hover:text-white text-sm">
-              Our Team
-            </Link>
-            <Link href="#" className="text-gray-300 hover:text-white text-sm">
-              Contact Us
-            </Link>
-            <Link href="#" className="text-gray-300 hover:text-white text-sm">
-              FAQ
+            <Link href="#" className="text-[#BFBFBF] hover:text-white text-sm">
+              Terms of Use
             </Link>
           </div>
         </div>

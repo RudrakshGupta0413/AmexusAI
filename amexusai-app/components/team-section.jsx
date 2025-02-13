@@ -41,15 +41,16 @@ export default function TeamSection() {
   ]
 
   return (
-    <section className="min-h-screen bg-[#0A0F1D] py-20 px-4">
+    <section id="team" className="min-h-[90vh] sm:min-h-[80vh] bg-[#0A0F1D] py-20 px-4">
       <div className="max-w-[1550px] mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Meet the Minds</h2>
-          <h3 className="max-w-4xl mx-auto text-xl sm:text-md text-[#9A9A9A] mb-12 tracking-[0.2em]">
+          <p className="max-w-4xl mx-auto text-base sm:text-xl text-[#9A9A9A] mb-8 sm:mb-12 tracking-[0.1em] sm:tracking-[0.1em]">
             Our team of experts brings a wealth of knowledge and experience in delivering innovative AI solutions.
-          </h3>
+          </p>
+
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[64px] md:gap-6">
           {teamMembers.map((member, index) => (
             <TeamMemberCard
               key={index}

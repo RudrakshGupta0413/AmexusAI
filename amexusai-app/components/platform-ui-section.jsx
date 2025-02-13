@@ -31,7 +31,7 @@ export default function PlatformSection() {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.4 }
+      { threshold: 0.3 }
     );
 
     observer.observe(sectionRef.current);
@@ -42,8 +42,8 @@ export default function PlatformSection() {
   }, []);
 
   return (
-    <section
-      ref={sectionRef} 
+    <section id="solution"
+      ref={sectionRef}
       className="flex flex-col items-center justify-center px-4 py-6 md:py-12 relative w-full"
     >
       <div className="max-w-[1550px] w-full mx-auto">
@@ -80,16 +80,27 @@ export default function PlatformSection() {
           className="relative w-full flex justify-center"
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <Image
-            src={mockupData[activeTab].image || "/placeholder.svg"}
-            alt={mockupData[activeTab].title}
-            width={1200}
-            height={800}
-            className="w-full max-w-[95%] md:max-w-full rounded-lg shadow-2xl object-cover transition-all duration-300"
-          />
+          {/* Image Wrapper with Text Overlay */}
+          <div className="relative w-full max-w-[95%] md:max-w-full">
+            <Image
+              src={mockupData[activeTab].image || "/placeholder.svg"}
+              alt={mockupData[activeTab].title}
+              width={1200}
+              height={800}
+              className="w-full rounded-lg shadow-2xl object-cover transition-all duration-300"
+            />
+
+            {/* Responsive Text Overlay */}
+            <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
+              <h1 className="text-white text-lg sm:text-md md:text-3xl lg:text-5xl font-bold drop-shadow-lg tracking-[0.15em] sm:tracking-[0.1em]">
+                Glimpses of Amexus AI
+              </h1>
+            </div>
+          </div>
         </motion.div>
+
       </div>
       {/* Background Gradient Fix */}
       <div className="absolute bottom-0 left-0 right-0 h-48 md:h-64 bg-gradient-to-b from-transparent to-[#0A0F1D] pointer-events-none"></div>

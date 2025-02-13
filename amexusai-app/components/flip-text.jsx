@@ -27,7 +27,10 @@ export default function AnimatedText() {
           transition={{ duration: 0.5, ease: "easeInOut" }}
           className="absolute inset-0 flex items-center justify-start"
         >
-          <span className="text-[#4CAF50] whitespace-nowrap">{words[index]}</span>
+          <span className="bg-gradient-to-r from-[#4CAF50] to-[#A4D03C] bg-clip-text text-transparent whitespace-nowrap">
+            {words[index]}
+          </span>
+
         </motion.div>
       </AnimatePresence>
     </div>
