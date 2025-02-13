@@ -1,4 +1,9 @@
-
+import Navbar from "@/components/navbar"
+import Hero from "@/components/hero"
+import Mockup from "@/components/mockup"
+import Slide2 from "@/components/slide2"
+import Slide3 from "@/components/slide3"
+import Slide4 from "@/components/slide4"
 import Navbar from "@/components/navbar";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
@@ -36,6 +41,11 @@ export default function Home() {
       <ParallaxBackground />
       <div className="relative z-10">
         <Navbar />
+        <Hero />
+        <Mockup />
+        <Slide2 />
+        <Slide3 />
+        <Slide4 />
         <HeroSection />
         <PlatformSection />
       </div>
