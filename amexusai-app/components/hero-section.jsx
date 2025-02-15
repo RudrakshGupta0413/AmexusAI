@@ -21,7 +21,7 @@ export default function HeroSection() {
                     <div className="mt-2">Custom AI Chatbots/Solutions</div>
                 </h1>
 
-                <p className="max-w-screen mx-auto text-base sm:text-md lg:text-2xl text-[#9A9A9A] mb-12 text-center tracking-[0.1em]">
+                <p className="max-w-screen mx-auto text-base sm:text-md lg:text-2xl text-[#9A9A9A] mb-12 text-center tracking-[0.1em] font-mono">
                     Amexus AI empowers businesses with custom-built chatbots that optimize
                     <br />
                     customer interactions. Generate qualified leads and automate key processes.

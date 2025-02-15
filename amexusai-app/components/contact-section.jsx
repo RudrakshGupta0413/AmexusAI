@@ -32,7 +32,7 @@ export default function ContactSection() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-5">
               Get in Touch with Us!
             </h1>
-            <p className="text-lg sm:text-xl text-[#9A9A9A] mb-8 tracking-wide">
+            <p className="text-lg sm:text-xl text-[#9A9A9A] mb-8 tracking-wide font-mono">
               We're excited to help you leverage AI for your business.
             </p>
             <div className="flex justify-center md:justify-start">

@@ -45,7 +45,7 @@ export default function TeamSection() {
       <div className="max-w-[1550px] mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Meet the Minds</h2>
-          <p className="max-w-4xl mx-auto text-base sm:text-xl text-[#9A9A9A] mb-8 sm:mb-12 tracking-[0.1em] sm:tracking-[0.1em]">
+          <p className="max-w-4xl mx-auto text-base sm:text-xl text-[#9A9A9A] mb-8 sm:mb-12 tracking-[0.1em] sm:tracking-[0.1em] font-mono">
             Our team of experts brings a wealth of knowledge and experience in delivering innovative AI solutions.
           </p>
 

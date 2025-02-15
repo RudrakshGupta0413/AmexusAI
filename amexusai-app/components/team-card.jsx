@@ -24,7 +24,7 @@ export default function TeamMemberCard({ name, position, image, gradient, social
 
       {/* Name & Position */}
       <h3 className="text-white text-lg sm:text-xl font-semibold mb-1 relative z-10">{name}</h3>
-      <p className="text-gray-300 text-sm sm:text-base mb-3 sm:mb-4 relative z-10">{position}</p>
+      <p className="text-gray-300 text-sm sm:text-base mb-3 sm:mb-4 relative z-10 font-mono">{position}</p>
 
       {/* Social Media Icons */}
       <div className="flex justify-center items-center gap-3 sm:gap-4 relative z-10">
