@@ -37,7 +37,7 @@ const Slide3 = () => {
           <a
             href="#book-demo"
             className={`inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#2E8B57] to-[#9ACD32] 
-              hover:from-[#247346] hover:to-[#89BC21] text-white font-semibold rounded-lg transition-all duration-300 ${robotoSlab.className}`}
+              hover:from-[#247346] hover:to-[#89BC21] text-white font-semibold rounded-xl transition-all duration-300 ${robotoSlab.className}`}
           >
             Book Demo
             <svg
