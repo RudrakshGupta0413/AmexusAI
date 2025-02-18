@@ -21,17 +21,17 @@ const features = [
     title: "Autonomous AI Agents",
     description:
       "AI that doesn't just analyze-it takes action to move your business forward.",
-    gif: "https://media.giphy.com/media/l0HlNaQ6gWfllcjDO/giphy.gif",
+    gif: "/slide2_image1.png",                                              //add links to the gif here if required later
   },
   {
     title: "Tailored for Your Industry",
     description: "AI tailored to your industry needs,integrating effortlessly into your workflow.",
-    gif: "https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif",
+    gif: "/slide2_image2.png",
   },
   {
     title: "Fast & Easy Deployment",
     description: "No complex setup-delpoy AI instantly and start automating from day one.",
-    gif: "https://media.giphy.com/media/3oKIPavn7vUxWFjTqw/giphy.gif",
+    gif: "/slide2_image3.png",
   },
 ]
 
@@ -122,10 +122,10 @@ export default function Slide2() {
                   aria-pressed={selectedFeature === index}
                 >
                   <div className="py-6">
-                    <h3 className={`text-xl font-bold mb-2 md:whitespace-nowrap ${robotoSlab.className}`}>
+                    <h3 className={`text-2xl font-bold mb-2 md:whitespace-nowrap ${robotoSlab.className}`}>
                       {feature.title}
                     </h3>
-                    <p className="text-gray-400 leading-relaxed text-sm">{feature.description}</p>
+                    <p className="text-gray-400 leading-relaxed text-base">{feature.description}</p>
                   </div>
                 </div>
               ))}
