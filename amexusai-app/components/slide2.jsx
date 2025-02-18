@@ -18,19 +18,19 @@ const firaCode = Fira_Code({
 
 const features = [
   {
-    title: "Expert Validated Results",
+    title: "Autonomous AI Agents",
     description:
-      "Inter-application automation with expert led validation",
+      "AI that doesn't just analyze-it takes action to move your business forward.",
     gif: "https://media.giphy.com/media/l0HlNaQ6gWfllcjDO/giphy.gif",
   },
   {
-    title: "Real-time Virtual Assistance",
-    description: "Enable user with seamless responses to conversational prompts",
+    title: "Tailored for Your Industry",
+    description: "AI tailored to your industry needs,integrating effortlessly into your workflow.",
     gif: "https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif",
   },
   {
-    title: "Best-in-class Data Security",
-    description: "Ensure end-to-end encoding and masking for sensitive user data.",
+    title: "Fast & Easy Deployment",
+    description: "No complex setup-delpoy AI instantly and start automating from day one.",
     gif: "https://media.giphy.com/media/3oKIPavn7vUxWFjTqw/giphy.gif",
   },
 ]

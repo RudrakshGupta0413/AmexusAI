@@ -1,5 +1,8 @@
-"use client"
-import { motion } from "framer-motion"
+"use client";
+
+import React from 'react';
+import { motion } from "framer-motion";
+import Image from "next/image";
 import { Roboto_Slab, Fira_Code } from "next/font/google"
 
 const robotoSlab = Roboto_Slab({
@@ -7,99 +10,83 @@ const robotoSlab = Roboto_Slab({
   display: "swap",
 })
 
-const slide4 = () => {
-  const gradientStyle = {
-    background: "linear-gradient(180deg, #F0E68C 0%, #9ACD32 30%, #2E8B57 100%)",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-    backgroundClip: "text",
-    filter: "brightness(1.1) contrast(1.05)",
-  }
+const solutions = [
+  {
+    title: ["Revolutionizing", "Healthcare with", "Amexus AI"],
+    description:
+      "Our AI-powered health assistant analyzes medical reports, suggests specialists, and schedules appointments—all with real-time intelligence. Enhance patient care, reduce administrative burdens, and optimize healthcare workflows.",
+    image: "/placeholder.svg?height=300&width=400",
+    alt: "AI in Healthcare",
+  },
+  {
+    title: ["AI-Driven", "Supply Chain", "Efficiency"],
+    description:
+      "Enhance logistics with AI-powered demand forecasting, automated inventory management, and intelligent route optimization. Reduce delays, cut costs, and ensure seamless supply chain operations.",
+    image: "/placeholder.svg?height=300&width=400",
+    alt: "AI in Supply Chain",
+  },
+  {
+    title: ["Fortifying", "Cybersecurity", "with AI"],
+    description:
+      "Detect fraud, prevent cyber threats, and monitor security risks in real time with AI-driven anomaly detection and automated response systems. Stay ahead of evolving security challenges with cutting-edge intelligence.",
+    image: "/placeholder.svg?height=300&width=400",
+    alt: "AI in Cybersecurity",
+  },
+  {
+    title: ["Smarter", "E-Commerce with", "Amexus AI"],
+    description:
+      "AI-powered chatbots, personalized recommendations, and automated supply chain management drive sales and customer engagement. Optimize pricing, reduce cart abandonment, and boost conversions effortlessly.",
+    image: "/placeholder.svg?height=300&width=400",
+    alt: "AI in E-commerce",
+  },
+];
 
-  const steps = [
-    {
-      number: "1",
-      title: "Share Your Requirements",
-      description: "Simply share your requirements & preferences.",
-    },
-    {
-      number: "2",
-      title: "Amexus AI Learn Your Needs",
-      description: "Amexus AI processes your input and organizes the data.",
-    },
-    {
-      number: "3",
-      title: "Get Customized Actions",
-      description: "Amexus AI suggests tailored actions that meet your needs.",
-    },
-    {
-      number: "4",
-      title: "AI Executes Actions for You",
-      description: "Amexus AI executes those actions, saving you time & effort.",
-    },
-  ]
-
-  const containerVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  }
-
-  const itemVariants = {
-    hidden: {
-      opacity: 0,
-      y: 20,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
-    },
-  }
-
+export default function AISolutions() {
   return (
-    <section className="min-h-screen bg-[#171B26] py-20 px-4">
-      <div className="max-w-6xl mx-auto">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <h2 className={`text-4xl md:text-5xl font-normal text-white mb-6 ${robotoSlab.className}`}>How Amexus AI Transforms Your Business</h2>
-          <p className="text-lg md:text-xl text-gray-400 font-mono">
-            Effortlessly integrate AI into your workflow with just a few easy steps.
+    <div className="min-h-screen bg-[#171B26] text-white py-16 px-6">
+      <div className="max-w-[1200px] mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-normal mb-4 tracking-tight font-robotoSlab">Solving Industry Challenges with AI</h1>
+          <p className="text-base text-gray-400 max-w-2xl mx-auto font-mono">
+            Explore how Amexus AI drives efficiency, boosts customer satisfaction, and delivers actionable insights for
+            businesses worldwide
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {steps.map((step, index) => (
-            <motion.div key={index} variants={itemVariants} className="bg-[#0D111D] rounded-2xl p-8 flex flex-col">
-              <div className="text-[4rem] font-bold mb-6 leading-none" style={gradientStyle}>
-                {step.number}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {solutions.map((solution, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+                ease: "easeOut",
+              }}
+              whileHover={{
+                y: -10,
+                transition: { duration: 0.2 },
+              }}
+              className="bg-[#0D111D] rounded-xl overflow-hidden shadow-lg"
+            >
+              <div className="relative aspect-[4/3]">
+                <Image src={solution.image || "/placeholder.svg"} alt={solution.alt} fill className="object-cover" />
               </div>
-              <h3 className={`text-xl font-normal text-white mb-4 ${robotoSlab.className}`}>{step.title}</h3>
-              <p className={`text-gray-400 font-mono text-sm leading-relaxed italic`}>{step.description}</p>
+              <div className="p-6">
+                <div className="h-[90px] mb-4">
+                  {solution.title.map((line, i) => (
+                    <h3 key={i} className="text-lg font-bold leading-snug font-roboto-slab">
+                      {line}
+                    </h3>
+                  ))}
+                </div>
+                <p className="text-gray-400 text-xs font-mono leading-relaxed italic">{solution.description}</p>
+              </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
-    </section>
-  )
+    </div>
+  );
 }
-
-export default slide4
-
