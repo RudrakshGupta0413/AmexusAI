@@ -48,8 +48,8 @@ const solutions = [
 
 export default function AISolutions() {
   return (
-    <section className="min-h-[80vh] bg-[#171B26] py-20 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section className="min-h-[87vh] bg-[#171B26] py-20 px-4">
+      <div className="max-w-[1350px] mx-auto">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}

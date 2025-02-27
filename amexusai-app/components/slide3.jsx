@@ -37,7 +37,7 @@ const Slide3 = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="min-h-screen bg-[#0D111D] py-8 md:py-16 px-4"
     >
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-[1350px] mx-auto text-center">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -51,23 +51,25 @@ const Slide3 = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-base md:text-lg lg:text-xl text-gray-300 mb-8 md:mb-16 font-mono max-w-2xl mx-auto"
+          className="text-base md:text-lg lg:text-xl text-[#9A9A9A] mb-8 md:mb-16 font-mono max-w-6xl mx-auto"
         >
           Let Amexus AI optimize your processes and help your business grow faster.
         </motion.p>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 max-w-lg lg:max-w-none mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 w-full max-w-[1400px] mx-auto">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.2 }}
+              className="w-full h-full p-6 rounded-2xl bg-[#171B26] flex flex-col items-center justify-center"
             >
-              <AnimatedStat prefix={stat.prefix} targetValue={stat.value} label={stat.label} />
+              <AnimatedStat prefix={stat.prefix} targetValue={stat.value} label={stat.label} className="bg-transparent" />
             </motion.div>
           ))}
         </div>
+
 
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -76,6 +78,7 @@ const Slide3 = () => {
           className="mt-8 md:mt-16 flex justify-center w-full"
         >
           <Button
+          
             className="bg-gradient-to-r from-[#4CAF50] to-[#A4D03C] hover:opacity-90 text-white rounded-xl px-6 py-6 text-lg flex items-center justify-center"
             onClick={() => setIsPopupOpen(true)}
           >

@@ -37,7 +37,7 @@ export const AnimatedStat = ({ prefix, targetValue, label }) => {
   }, [])
 
   return (
-    <div ref={ref} className="bg-[#161923] rounded-2xl p-4 md:p-8 flex flex-col items-center">
+    <div ref={ref} className="bg-[#171B26] rounded-2xl p-4 md:p-8 flex flex-col items-center">
       {prefix && <div className="text-xs md:text-sm text-gray-400 mb-2 md:mb-4 font-mono">{prefix}</div>}
       {!prefix && <div className="text-xs md:text-sm text-gray-400 mb-2 md:mb-4 invisible">Placeholder</div>}
       <div

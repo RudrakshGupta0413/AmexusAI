@@ -65,7 +65,7 @@ export default function Slide2() {
           <h1 className={`text-3xl md:text-4xl lg:text-5xl font-normal mb-4 mx-auto leading-tight md:whitespace-nowrap ${robotoSlab.className}`}>
             Unlock AI&apos;s Full Potential in Your Business
           </h1>
-          <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto px-4">
+          <p className="text-[#D2D2D2] text-base md:text-lg max-w-6xl mx-auto px-4">
             Amexus AI&apos;s chatbots are designed to streamline your business operations, automate processes, and
             enhance customer interactions
           </p>
