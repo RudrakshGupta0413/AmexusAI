@@ -1,5 +1,5 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -25,9 +25,9 @@ export default function Footer() {
 
         {/* Mobile Layout */}
         <div className="md:hidden flex flex-col items-center space-y-4">
-        <Link href="/">
-              <Image src="/Logo.png" alt="Amexus AI" width={150} height={50} />
-            </Link>
+          <Link href="/">
+            <Image src="/Logo.png" alt="Amexus AI" width={150} height={50} />
+          </Link>
           <p className="text-[#FFFFFF] text-MD">Bridging Business with AI</p>
           <div className="flex gap-6 mt-2">
             <Link href="#" className="text-[#BFBFBF] hover:text-white text-sm">
@@ -41,10 +41,11 @@ export default function Footer() {
 
         {/* Copyright - Both Layouts */}
         <div className="text-center mt-8 pt-4 border-t border-gray-800">
-          <p className="text-gray-400 text-xs">© 2025 Amexus AI. All Rights Reserved.</p>
+          <p className="text-white text-ms">
+            © 2025 Amexus AI. All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }
-

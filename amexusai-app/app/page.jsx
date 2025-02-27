@@ -11,29 +11,6 @@ import ParallaxBackground from "@/components/parallax-bg";
 
 export default function Home() {
   return (
-    // <main className="min-h-screen bg-[#0A0F1D]">
-    //   {/* Background Image for Hero and Platform Sections */}
-    //   <div
-    //     className="relative bg-fixed bg-cover bg-center"
-    //     style={{
-    //       backgroundImage: 'url("/BgImage.png")',
-    //     }}
-    //   >
-    //     {/* Overlay for Background Image */}
-    //     <div className="bg-[#0A0F1D]/30">
-    //       <Navbar />
-    //       <HeroSection />
-    //       <PlatformSection />
-    //     </div>
-    //   </div>
-    //   {/* Solid Background Sections */}
-    //   <div className="bg-[#0A0F1D]">
-    //     <TeamSection />
-    //     <ContactSection />
-    //     <Footer />
-    //   </div>
-    // </main>
-
     <main className="min-h-screen relative bg-[#0A0F1D]">
       <ParallaxBackground />
       <div className="relative z-10">

@@ -4,10 +4,11 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { HandHeart, Megaphone } from "lucide-react";
 
 const mockupData = {
   health: {
-    image: "/Mockup_2.png",
+    image: "/Mockup_3.png",
     title: "Health Care Solutions",
   },
   marketing: {
@@ -42,36 +43,66 @@ export default function PlatformSection() {
   }, []);
 
   return (
-    <section id="solution"
+    <section
+      id="solution"
       ref={sectionRef}
       className="flex flex-col items-center justify-center px-4 py-6 md:py-12 relative w-full"
     >
-      <div className="max-w-[1550px] w-full mx-auto">
+      <div className="max-w-[1350px] w-full mx-auto">
         <div className="flex justify-center gap-2 md:gap-4 mb-6 md:mb-10">
+          <svg width="0" height="0">
+            <defs>
+              <linearGradient
+                id="gradientIcon"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%"
+              >
+                <stop offset="0%" stopColor="#57ebde" />
+                <stop offset="100%" stopColor="#aefb2a" />
+              </linearGradient>
+            </defs>
+          </svg>
+
           <button
             onClick={() => setActiveTab("health")}
             className={cn(
-              "px-4 py-2 md:px-6 md:py-3 rounded-full transition-all duration-300 text-sm md:text-base",
+              "flex items-center px-4 py-2 md:px-6 md:py-3 rounded-full transition-all duration-300 text-sm md:text-base",
               activeTab === "health"
                 ? "gradient-border-active glow-effect font-medium"
                 : "text-gray-400 hover:text-gray-300 bg-[#171b26] hover:bg-[#1f2937]"
             )}
           >
+            <HandHeart
+              className="w-5 h-5 mr-3"
+              style={{
+                fill: activeTab === "health" ? "url(#gradientIcon)" : "#9CA3AF",
+              }}
+            />
             <span className={activeTab === "health" ? "gradient-text" : ""}>
-              Health Care
+              Supply Chain
             </span>
           </button>
+
           <button
             onClick={() => setActiveTab("marketing")}
             className={cn(
-              "px-4 py-2 md:px-6 md:py-3 rounded-full transition-all duration-300 text-sm md:text-base",
+              "flex items-center px-4 py-2 md:px-6 md:py-3 rounded-full transition-all duration-300 text-sm md:text-base",
               activeTab === "marketing"
                 ? "gradient-border-active glow-effect font-medium"
                 : "text-gray-400 hover:text-gray-300 bg-[#171b26] hover:bg-[#1f2937]"
             )}
           >
+            <Megaphone
+              className="w-5 h-5 mr-3"
+              style={{
+                fill:
+                  activeTab === "marketing" ? "url(#gradientIcon)" : "#9CA3AF",
+              }}
+            />
             <span className={activeTab === "marketing" ? "gradient-text" : ""}>
-              Marketing
+              Finance & Accounting
             </span>
           </button>
         </div>
@@ -100,7 +131,6 @@ export default function PlatformSection() {
             </div>
           </div>
         </motion.div>
-
       </div>
       {/* Background Gradient Fix */}
       <div className="absolute bottom-0 left-0 right-0 h-48 md:h-64 bg-gradient-to-b from-transparent to-[#0A0F1D] pointer-events-none"></div>

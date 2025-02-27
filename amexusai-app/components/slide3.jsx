@@ -1,60 +1,92 @@
 "use client"
+
 import { getCLS, getFID, getLCP } from 'web-vitals';
 import { AnimatedStat } from "./animatedstat"
 import { Roboto_Slab, Fira_Code } from "next/font/google"
+import { Button } from './ui/button';
+import { ArrowRight } from 'lucide-react';
+import ComingSoonPopup from './coming-soon-popup';
+import { useState } from 'react';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const robotoSlab = Roboto_Slab({
   subsets: ["latin"],
   display: "swap",
-})
+});
 
 const Slide3 = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
   const stats = [
     { prefix: "Upto", value: 50, label: "Boost in\nOperational\nEfficiency" },
     { value: 30, label: "Increase in Lead\nConversion" },
     { value: 60, label: "Reduction in\nResponse Time" },
     { prefix: "Achieve", value: 20, label: "Growth in ROI" },
-  ]
+  ];
 
   return (
-    <section className="min-h-screen bg-[#0D111D] py-8 md:py-16 px-4">
+    <motion.section
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="min-h-screen bg-[#0D111D] py-8 md:py-16 px-4"
+    >
       <div className="max-w-6xl mx-auto text-center">
-        <h1 className={`text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-3 md:mb-4 ${robotoSlab.className}`}>
+        <motion.h1
+          initial={{ opacity: 0, y: -20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className={`text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-3 md:mb-4 ${robotoSlab.className}`}
+        >
           Achieve Tangible Results
           <br className="hidden sm:block" /> with Amexus AI
-        </h1>
-        <p className="text-base md:text-lg lg:text-xl text-gray-300 mb-8 md:mb-16 font-mono max-w-2xl mx-auto">
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: -20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-base md:text-lg lg:text-xl text-gray-300 mb-8 md:mb-16 font-mono max-w-2xl mx-auto"
+        >
           Let Amexus AI optimize your processes and help your business grow faster.
-        </p>
+        </motion.p>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 max-w-lg lg:max-w-none mx-auto">
           {stats.map((stat, index) => (
-            <AnimatedStat key={index} prefix={stat.prefix} targetValue={stat.value} label={stat.label} />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+            >
+              <AnimatedStat prefix={stat.prefix} targetValue={stat.value} label={stat.label} />
+            </motion.div>
           ))}
         </div>
 
-        <div className="mt-8 md:mt-16">
-          <a
-            href="#book-demo"
-            className={`inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#2E8B57] to-[#9ACD32] 
-              hover:from-[#247346] hover:to-[#89BC21] text-white font-semibold rounded-xl transition-all duration-300 ${robotoSlab.className}`}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={inView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="mt-8 md:mt-16 flex justify-center w-full"
+        >
+          <Button
+            className="bg-gradient-to-r from-[#4CAF50] to-[#A4D03C] hover:opacity-90 text-white rounded-xl px-6 py-6 text-lg flex items-center justify-center"
+            onClick={() => setIsPopupOpen(true)}
           >
-            Book Demo
-            <svg
-              className="ml-2 w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
+            Book Demo <ArrowRight className="ml-2 h-6 w-6" />
+          </Button>
+        </motion.div>
       </div>
-    </section>
-  )
-}
 
-export default Slide3
+      <ComingSoonPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
+    </motion.section>
+  );
+};
 
+export default Slide3;
