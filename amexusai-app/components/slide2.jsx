@@ -21,12 +21,12 @@ const features = [
   {
     title: "Expert Validated Results",
     description: "Inter-application automation with expert-led validation",
-    gif: "https://media.giphy.com/media/l0HlNaQ6gWfllcjDO/giphy.gif",
+    gif: "/slide2_image1.png",
   },
   {
     title: "Real-time Virtual Assistance",
     description: "Enable users with seamless responses to conversational prompts",
-    gif: "https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif",
+    gif: "/slide2_image2.png",
   },
   {
     title: "Fast & Easy Deployment",

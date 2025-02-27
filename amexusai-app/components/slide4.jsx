@@ -17,13 +17,6 @@ const firaCode = Fira_Code({
 
 const solutions = [
   {
-    title: ["Revolutionizing", "Healthcare with", "Amexus AI"],
-    description:
-      "Our AI-powered health assistant analyzes medical reports, suggests specialists, and schedules appointments—all with real-time intelligence. Enhance patient care, reduce administrative burdens, and optimize healthcare workflows.",
-    image: "/slide4_image1.png",
-    alt: "AI in Healthcare",
-  },
-  {
     title: ["AI-Driven", "Supply Chain", "Efficiency"],
     description:
       "Enhance logistics with AI-powered demand forecasting, automated inventory management, and intelligent route optimization. Reduce delays, cut costs, and ensure seamless supply chain operations.",
@@ -31,9 +24,9 @@ const solutions = [
     alt: "AI in Supply Chain",
   },
   {
-    title: ["Fortifying", "Cybersecurity", "with AI"],
+    title: ["Transforming", "Finance with AI"],
     description:
-      "Detect fraud, prevent cyber threats, and monitor security risks in real time with AI-driven anomaly detection and automated response systems. Stay ahead of evolving security challenges with cutting-edge intelligence.",
+      "Our AI-driven financial assistant analyses transactions, detects fraud, automates wealth management, and enhances customer support-all in real time. Bost decision-making, improve security, and streamline financial operation.",
     image: "/slide4_image3.png",
     alt: "AI in Cybersecurity",
   },
@@ -44,6 +37,14 @@ const solutions = [
     image: "/slide4_image4.png",
     alt: "AI in E-commerce",
   },
+  {
+    title: ["Revolutionizing", "Healthcare with", "Amexus AI"],
+    description:
+      "Our AI-powered health assistant analyzes medical reports, suggests specialists, and schedules appointments—all with real-time intelligence. Enhance patient care, reduce administrative burdens, and optimize healthcare workflows.",
+    image: "/slide4_image1.png",
+    alt: "AI in Healthcare",
+  },
+  
 ];
 
 export default function AISolutions() {
@@ -95,7 +96,7 @@ export default function AISolutions() {
               <div className="p-6">
                 <div className="h-[90px] mb-4">
                   {solution.title.map((line, i) => (
-                    <h3 key={i} className={`text-2xl font-bold leading-snug ${robotoSlab.className}`}>
+                    <h3 key={i} className={`text-2xl font-bold leading-snug text-white ${robotoSlab.className}`}>
                       {line}
                     </h3>
                   ))}

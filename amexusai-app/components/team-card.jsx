@@ -10,7 +10,7 @@ export default function TeamMemberCard({ name, position, image, alumni, experien
       
       {/* Profile Image */}
       <div className="flex justify-center mb-4 relative z-10">
-        <div className="relative w-52 h-52 sm:w-44 sm:h-44 rounded-full overflow-hidden border-4 border-white">
+        <div className="relative w-52 h-52 sm:w-44 sm:h-44 rounded-full overflow-hidden border-4 border-white bg-white">
           <Image
             src={image || "/placeholder.svg"}
             alt={name}
@@ -31,10 +31,13 @@ export default function TeamMemberCard({ name, position, image, alumni, experien
       <div className="flex justify-center items-center gap-2 mt-2 text-white">
         Ex - 
         {experience.includes("Microsoft") && (
-          <Image src="/Image.png" alt="Microsoft" width={90} height={18} />
+          <Image src="/Microsoft-Logo.png" alt="Microsoft" width={90} height={18} />
         )}
         {experience.includes("Qualcomm") && (
-          <Image src="/Qualcomm-Logo.svg.png" alt="Qualcomm" width={80} height={18} />
+          <Image src="/Qualcomm-Logo.png" alt="Qualcomm" width={80} height={18} />
+        )}
+        {experience.includes("Samsung") && (
+          <Image src="/Samsung-Logo.png" alt="Qualcomm" width={80} height={18} />
         )}
       </div>
 

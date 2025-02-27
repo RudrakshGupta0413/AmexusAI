@@ -12,7 +12,7 @@ const mockupData = {
     title: "Health Care Solutions",
   },
   marketing: {
-    image: "/Mockup_2.png",
+    image: "/Mockup_4.png",
     title: "Marketing Solutions",
   },
 };
@@ -124,11 +124,11 @@ export default function PlatformSection() {
             />
 
             {/* Responsive Text Overlay */}
-            <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
+            {/* <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
               <h1 className="text-white text-lg sm:text-md md:text-3xl lg:text-5xl font-bold drop-shadow-lg tracking-[0.15em] sm:tracking-[0.1em]">
                 Glimpses of Amexus AI
               </h1>
-            </div>
+            </div> */}
           </div>
         </motion.div>
       </div>

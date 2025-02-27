@@ -9,12 +9,12 @@ export default function TeamSection() {
     {
       name: "Amit Gurawa",
       position: "Founder",
-      image: "/Amit_Gurawa.png",
+      image: "/Amit_Profile.png",
       alumni: "IIT-BHU, Varanasi Alumni",
-      experience: ["Microsoft", "Qualcomm"],
+      experience: ["Microsoft", "Qualcomm", "Samsung"],
       gradient: "bg-gradient-to-l from-[#364011] to-[#2b4835]",
       socials: {
-        linkedin: "https://linkedin.com/in/amitgurawa",
+        linkedin: "https://linkedin.com/in/amit-gurawa-910905186",
         twitter: "https://twitter.com/amitgurawa",
       },
     },

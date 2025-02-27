@@ -46,7 +46,7 @@ export const AnimatedStat = ({ prefix, targetValue, label }) => {
       >
         {isInView ? <CountUp start={0} end={targetValue} duration={3} separator="," /> : "0"}%
       </div>
-      <div className="text-xs md:text-sm text-gray-400 mt-1 md:mt-2 whitespace-pre-line font-mono text-center">
+      <div className="text-md md:text-sm text-[#BEBEBE] mt-1 md:mt-2 whitespace-pre-line font-mono text-center">
         {label}
       </div>
     </div>
