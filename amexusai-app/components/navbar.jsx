@@ -37,7 +37,7 @@ export default function Navbar() {
             </button>
 
              {/* Connect FAQ once all the pages are merger */ }
-            <button onClick={() => handleScroll("faq")} className="text-[#BFBFBF] hover:text-white">
+            <button onClick={() => handleScroll("#")} className="text-[#BFBFBF] hover:text-white">
               FAQ
             </button>
           </div>

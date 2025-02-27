@@ -15,7 +15,7 @@ export default function TeamSection() {
       gradient: "bg-gradient-to-l from-[#364011] to-[#2b4835]",
       socials: {
         linkedin: "https://linkedin.com/in/amit-gurawa-910905186",
-        twitter: "https://twitter.com/amitgurawa",
+        twitter: "https://x.com/Amit_Amexus",
       },
     },
   ];
