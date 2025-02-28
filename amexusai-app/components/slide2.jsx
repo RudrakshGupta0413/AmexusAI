@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import { useInView } from "react-intersection-observer"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { Roboto_Slab, Fira_Code } from "next/font/google"
@@ -18,14 +19,13 @@ const firaCode = Fira_Code({
 
 const features = [
   {
-    title: "Autonomous AI Agents",
-    description:
-      "AI that doesn't just analyze-it takes action to move your business forward.",
-    gif: "/slide2_image1.png",                                              //add links to the gif here if required later
+    title: "Expert Validated Results",
+    description: "Inter-application automation with expert-led validation",
+    gif: "/slide2_image1.png",
   },
   {
-    title: "Tailored for Your Industry",
-    description: "AI tailored to your industry needs,integrating effortlessly into your workflow.",
+    title: "Real-time Virtual Assistance",
+    description: "Enable users with seamless responses to conversational prompts",
     gif: "/slide2_image2.png",
   },
   {
@@ -40,6 +40,11 @@ export default function Slide2() {
   const [imageLoading, setImageLoading] = useState(true)
   const [imageError, setImageError] = useState(false)
 
+  const { ref, inView } = useInView({
+    triggerOnce: true, 
+    threshold: 0.3, 
+  })
+
   const handleKeyDown = (event, index) => {
     if (event.key === "Enter" || event.key === " ") {
       setSelectedFeature(index)
@@ -47,16 +52,20 @@ export default function Slide2() {
   }
 
   return (
-    <div className={`min-h-screen bg-[#0D111D] text-white ${firaCode.className}`}>
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className={`min-h-[90vh] bg-[#171B26] mt-5 text-white ${firaCode.className}`}
+    >
       <div className="container mx-auto px-4 py-8 md:py-16 max-w-[1400px]">
         {/* Header Section */}
         <div className="text-center mb-8 md:mb-16">
-          <h1
-            className={`text-3xl md:text-4xl lg:text-5xl font-normal mb-4 mx-auto leading-tight md:whitespace-nowrap ${robotoSlab.className}`}
-          >
+          <h1 className={`text-3xl md:text-4xl lg:text-5xl font-normal mb-4 mx-auto leading-tight md:whitespace-nowrap ${robotoSlab.className}`}>
             Unlock AI&apos;s Full Potential in Your Business
           </h1>
-          <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto px-4">
+          <p className="text-[#D2D2D2] text-base md:text-lg max-w-6xl mx-auto px-4">
             Amexus AI&apos;s chatbots are designed to streamline your business operations, automate processes, and
             enhance customer interactions
           </p>
@@ -65,7 +74,13 @@ export default function Slide2() {
         {/* Mobile: Stack everything vertically */}
         <div className="md:hidden space-y-16">
           {features.map((feature, index) => (
-            <div key={index} className="text-center px-4">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: index * 0.2, duration: 0.6 }}
+              className="text-center px-4"
+            >
               <div className="relative w-48 h-48 mx-auto mb-6">
                 <Image
                   src={feature.gif || "/placeholder.svg"}
@@ -81,7 +96,7 @@ export default function Slide2() {
               </div>
               <h3 className={`text-2xl font-normal mb-3 ${robotoSlab.className}`}>{feature.title}</h3>
               <p className="text-gray-400 text-sm max-w-md mx-auto">{feature.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
@@ -89,10 +104,6 @@ export default function Slide2() {
         <div className="hidden md:grid md:grid-cols-2 gap-16 items-start">
           {/* Left Column: Features */}
           <div className="relative">
-            {/* Continuous background line */}
-            <div className="absolute left-4 top-0 w-1 h-full bg-gray-700/50 rounded-full" />
-
-            {/* Active indicator line */}
             <motion.div
               className="absolute left-4 w-1 bg-green-400 rounded-full"
               initial={false}
@@ -109,8 +120,11 @@ export default function Slide2() {
 
             <div className="space-y-0">
               {features.map((feature, index) => (
-                <div
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, x: -30 }}
+                  animate={inView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
                   className={cn(
                     "relative pl-12 cursor-pointer transition-colors duration-300",
                     selectedFeature === index ? "opacity-100" : "opacity-60 hover:opacity-80",
@@ -127,13 +141,18 @@ export default function Slide2() {
                     </h3>
                     <p className="text-gray-400 leading-relaxed text-base">{feature.description}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
 
           {/* Right Column: Preview Area */}
-          <div className="relative w-full h-full flex items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={inView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="relative w-full h-full flex items-center justify-center"
+          >
             <div className="relative w-[400px] aspect-square">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -169,10 +188,9 @@ export default function Slide2() {
                 </motion.div>
               </AnimatePresence>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
-

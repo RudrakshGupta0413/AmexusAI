@@ -37,7 +37,7 @@ export const AnimatedStat = ({ prefix, targetValue, label }) => {
   }, [])
 
   return (
-    <div ref={ref} className="bg-[#161923] rounded-2xl p-4 md:p-8 flex flex-col items-center">
+    <div ref={ref} className="bg-[#171B26] rounded-2xl p-4 md:p-8 flex flex-col items-center">
       {prefix && <div className="text-xs md:text-sm text-gray-400 mb-2 md:mb-4 font-mono">{prefix}</div>}
       {!prefix && <div className="text-xs md:text-sm text-gray-400 mb-2 md:mb-4 invisible">Placeholder</div>}
       <div
@@ -46,7 +46,7 @@ export const AnimatedStat = ({ prefix, targetValue, label }) => {
       >
         {isInView ? <CountUp start={0} end={targetValue} duration={3} separator="," /> : "0"}%
       </div>
-      <div className="text-xs md:text-sm text-gray-400 mt-1 md:mt-2 whitespace-pre-line font-mono text-center">
+      <div className="text-md md:text-sm text-[#BEBEBE] mt-1 md:mt-2 whitespace-pre-line font-mono text-center">
         {label}
       </div>
     </div>
