@@ -36,10 +36,10 @@ export default function BookingPage() {
                 </div>
                 <div className="flex flex-col md:flex-row justify-between items-center text-center md:space-x-4">
                     <div className="flex space-x-4 mb-4 md:mb-0">
-                        <a href="#" className="text-white text-xl md:text-2xl">
+                        <a href="https://www.linkedin.com/company/amexusai" className="text-white text-xl md:text-2xl">
                             <FaLinkedin />
                         </a>
-                        <a href="#" className="text-white text-xl md:text-2xl">
+                        <a href="https://x.com/AmexusAi" className="text-white text-xl md:text-2xl">
                             <FaXTwitter />
                         </a>
                     </div>
