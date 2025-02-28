@@ -1,0 +1,8 @@
+---
+deployment:
+  tasks:
+    # Define the deployment path
+    - export DEPLOYPATH=/home/sargblco/public_html/
+
+    # Copy all files to the deployment path (excluding hidden files like .git)
+    - /bin/cp -r * $DEPLOYPATH
