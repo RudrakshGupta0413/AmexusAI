@@ -4,7 +4,7 @@ import { Roboto_Slab } from "next/font/google"
 const robotoSlab = Roboto_Slab({ subsets: ["latin"], display: "swap" })
 
 export const metadata = {
-  title: "Amexus AI - Custom AI Chatbots & Solutions",
+  title: "Amexus AI - Custom AI Agents & Solutions",
   description: "Supercharge your business with custom AI chatbots and solutions",
 }
 
