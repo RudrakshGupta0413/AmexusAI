@@ -66,7 +66,7 @@ export default function Slide2() {
             Unlock AI&apos;s Full Potential in Your Business
           </h1>
           <p className="text-[#D2D2D2] text-base md:text-lg max-w-6xl mx-auto px-4">
-            Amexus AI&apos;s chatbots are designed to streamline your business operations, automate processes, and
+            Amexus AI&apos;s agents are designed to streamline your business operations, automate processes, and
             enhance customer interactions
           </p>
         </div>

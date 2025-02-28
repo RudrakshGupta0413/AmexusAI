@@ -31,7 +31,7 @@ export default function BookingPage() {
                         <br className="hidden md:block" /> Your Business with <br className="hidden md:block" /> Custom AI Solutions
                     </h1>
                     <p className="text-[#9A9A9A] font-roboto-slab text-base md:text-2xl mb-4 md:mb-6">
-                        Amexus AI empowers businesses with custom-built chatbots that optimize customer interactions, generate qualified leads, and automate key processes.
+                        Amexus AI empowers businesses with custom-built agents that optimize customer interactions, generate qualified leads, and automate key processes.
                     </p>
                 </div>
                 <div className="flex flex-col md:flex-row justify-between items-center text-center md:space-x-4">

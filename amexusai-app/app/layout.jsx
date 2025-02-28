@@ -5,7 +5,7 @@ const robotoSlab = Roboto_Slab({ subsets: ["latin"], display: "swap" })
 
 export const metadata = {
   title: "Amexus AI - Custom AI Agents & Solutions",
-  description: "Supercharge your business with custom AI chatbots and solutions",
+  description: "Supercharge your business with custom AI agents and solutions",
 }
 
 export default function RootLayout({ children }) {

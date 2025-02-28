@@ -33,7 +33,7 @@ const solutions = [
   {
     title: ["Smarter", "E-Commerce with", "Amexus AI"],
     description:
-      "AI-powered chatbots, personalized recommendations, and automated supply chain management drive sales and customer engagement. Optimize pricing, reduce cart abandonment, and boost conversions effortlessly.",
+      "AI-powered agents, personalized recommendations, and automated supply chain management drive sales and customer engagement. Optimize pricing, reduce cart abandonment, and boost conversions effortlessly.",
     image: "/slide4_image4.png",
     alt: "AI in E-commerce",
   },
