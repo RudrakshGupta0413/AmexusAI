@@ -10,6 +10,9 @@ module.exports = {
 	],
 	theme: {
 	  extend: {
+		screens: {
+			'xs': {'max': '400px'}, // Custom breakpoint for less than 400px
+		  },
 		fontFamily: {
 		  "roboto-slab": ["var(--font-roboto-slab)", "serif"],
 		},

@@ -37,7 +37,7 @@ export default function TeamSection() {
   return (
     <section
       id="team"
-      className="min-h-[90vh] sm:min-h-[80vh] bg-[#0A0F1D] py-20 px-4 pt-20 z-10"
+      className="min-h-[90vh] sm:min-h-[80vh] bg-[#0A0F1D] py-10 px-4 sm:px-6 md:px-5 lg:px-16 xl:px-24 pt-20 z-10 xs:w-full"
       ref={ref}
     >
       <div className="max-w-[1300px] mx-auto">
@@ -56,7 +56,7 @@ export default function TeamSection() {
           </p>
         </motion.div>
 
-        <div className="mx-auto grid gap-6 md:grid-cols-[1fr_1.5fr] md:gap-1 items-center">
+        <div className="mx-auto grid gap-6 md:grid-cols-[1fr_1fr] md:gap-1 sm:gap-4 items-center px-3">
           <motion.div
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
@@ -78,22 +78,22 @@ export default function TeamSection() {
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             variants={fadeUpVariants}
-            className="text-white text-left space-y-6"
+            className="text-white text-left space-y-4 sm:space-y-6 text-md sm:text-base md:text-lg lg:text-xl"
           >
-            <p className="text-lg md:text-xl text-[#FFFFFF] text-justify">
+            <p className="text-justify">
               At Amexus AI, we are a team of highly qualified professionals from
               IITs, IIMs, and BITS, bringing together expertise in AI, data
               science, and business strategy. Our team is driven by a shared
               passion for leveraging AI to empower businesses and drive
               innovation.
             </p>
-            <p className="text-lg md:text-xl text-[#FFFFFF] text-justify">
-              We strive for bringing in customer delight, ownership, and
-              relentless innovation—core values that enable us to develop
-              cutting-edge solutions that not only address today's challenges
-              but also anticipate the opportunities of tomorrow.
+            <p className="text-justify">
+              We strive for customer delight, ownership, and relentless
+              innovation—core values that enable us to develop cutting-edge
+              solutions that not only address today's challenges but also
+              anticipate the opportunities of tomorrow.
             </p>
-            <p className="text-lg md:text-xl text-[#FFFFFF] text-justify">
+            <p className="text-justify">
               Amexus AI is founded by a seasoned AI expert Amit Gurawa who
               previously worked as a Senior Machine Learning Engineer at
               Microsoft, Qualcomm, and Samsung before embarking on this journey
