@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function TeamMemberCard({ name, position, image, alumni, experience, socials, gradient }) {
   return (
-    <div className={`relative rounded-3xl py-4 sm:py-14 text-center ${gradient} min-h-[280px] sm:min-h-[380px] w-[280px] sm:w-[280px] xs:w-full mx-auto shadow-lg`}>
+    <div className={`relative rounded-3xl py-4 sm:py-14 text-center ${gradient} min-h-[280px] sm:min-h-[380px] w-[300px] lg:w-[320px] md:w-[300px] sm:w-[280px] xs:w-full mx-auto shadow-lg`}>
       
       {/* Profile Image */}
       <div className="flex justify-center mb-4 relative z-10">

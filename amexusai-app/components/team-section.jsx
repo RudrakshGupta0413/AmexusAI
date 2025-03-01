@@ -37,7 +37,7 @@ export default function TeamSection() {
   return (
     <section
       id="team"
-      className="min-h-[90vh] sm:min-h-[80vh] bg-[#0A0F1D] py-10 px-4 sm:px-6 md:px-5 lg:px-16 xl:px-24 pt-20 z-10 xs:w-full"
+      className="min-h-[90vh] sm:min-h-[80vh] bg-[#0A0F1D] py-10 px-4 sm:px-6 md:px-5 lg:px-16 xl:px-24 pt-20 z-10"
       ref={ref}
     >
       <div className="max-w-[1300px] mx-auto">
@@ -56,7 +56,7 @@ export default function TeamSection() {
           </p>
         </motion.div>
 
-        <div className="mx-auto grid gap-6 md:grid-cols-[1fr_1fr] md:gap-1 sm:gap-4 items-center px-3">
+        <div className="mx-auto grid gap-6 lg:grid-cols-[1fr_1.5fr] md:grid-cols-[1fr_1fr] md:gap-1 sm:gap-4 items-center px-3">
           <motion.div
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
