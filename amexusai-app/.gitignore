@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+/scripts
+app/api
+app/chatbot
+app/chatbox
+components/chatbot.jsx
+components/chatbox.jsx
+components/fileUpload.jsx
+public/MASTER.json
+public/uploads

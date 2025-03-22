@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
@@ -13,6 +14,11 @@ export default function Navbar() {
       section.scrollIntoView({ behavior: "smooth" });
       setIsOpen(false); 
     }
+  };
+
+  const openJobApplicationForm = () => {
+    window.open("https://forms.gle/CPMNhXzp6kugWkMa9", "_blank");
+    setIsOpen(false)
   };
 
   return (
@@ -40,6 +46,18 @@ export default function Navbar() {
             <button onClick={() => handleScroll("#")} className="text-[#BFBFBF] hover:text-white">
               FAQ
             </button>
+
+             {/* New Job Application Button */}
+            <button onClick={openJobApplicationForm} className="text-[#BFBFBF] hover:text-white">
+              Job Application
+            </button>
+
+            {/* <Link href="/chatbot" className="text-[#BFBFBF] hover:text-white">
+              ChatBot
+            </Link>
+            <Link href="/chatbox" className="text-[#BFBFBF] hover:text-white">
+              ChatBox
+            </Link> */}
           </div>
 
           {/* Mobile Hamburger Menu */}
@@ -68,6 +86,10 @@ export default function Navbar() {
           {/* Connect FAQ once all the pages are merger */ }
           <button onClick={() => handleScroll("faq")} className="block text-[#BFBFBF] hover:text-white">
             FAQ
+          </button>
+          {/* New Job Application Button for mobile */}
+          <button onClick={openJobApplicationForm} className="block text-[#BFBFBF] hover:text-white">
+            Job Application
           </button>
         </div>
       )}

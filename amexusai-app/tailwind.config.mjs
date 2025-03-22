@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
 	darkMode: ["class"],
 	content: [
 	  "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,8 +11,8 @@ module.exports = {
 	theme: {
 	  extend: {
 		screens: {
-			'xs': {'max': '400px'}, // Custom breakpoint for less than 400px
-		  },
+		  xs: { max: "400px" }, // Custom breakpoint for less than 400px
+		},
 		fontFamily: {
 		  "roboto-slab": ["var(--font-roboto-slab)", "serif"],
 		},
@@ -59,6 +59,5 @@ module.exports = {
 	  },
 	},
 	plugins: [require("tailwindcss-animate")],
-  }
-  
+  };
   
