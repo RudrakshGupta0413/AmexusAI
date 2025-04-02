@@ -40,7 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-
+# Chatbot and Chatbox
 /scripts
 app/api
 app/chatbot

@@ -25,9 +25,9 @@ const Slide3 = () => {
 
   const stats = [
     { prefix: "Upto", value: 50, label: "Boost in Logistics\nEfficiency" },
-    { value: 30, label: "Faster Delivery Times" },
-    { value: 60, label: "Faster Financial\nReporting" },
-    { prefix: "Achieve", value: 20, label: "Lower Operational\nCosts" },
+    { value: 60, label: "Faster Delivery Times" },
+    { value: 30, label: "Faster Financial\nReporting" },
+    { prefix: "Achieve", value: 25, label: "Lower Operational\nCosts" },
   ];
 
   return (
