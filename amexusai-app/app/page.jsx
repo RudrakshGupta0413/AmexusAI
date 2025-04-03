@@ -5,7 +5,7 @@ import Navbar from "@/components/navbar"
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 import HeroSection from "@/components/hero-section";
-import PlatformSection from "@/components/platform-ui-section";
+import WorkingSection from "@/components/working_section"
 import TeamSection from "@/components/team-section";
 import ParallaxBackground from "@/components/parallax-bg";
 
@@ -16,10 +16,9 @@ export default function Home() {
       <div className="relative z-10">
         <Navbar />
         <HeroSection />
-        <PlatformSection />
+        <WorkingSection />
         <Slide2 />
         <Slide3 />
-        <Slide4 />
       </div>
       <div className="bg-[#0A0F1D] relative z-20">
         <TeamSection />

@@ -49,7 +49,7 @@ export default function Navbar() {
 
              {/* New Job Application Button */}
             <button onClick={openJobApplicationForm} className="text-[#BFBFBF] hover:text-white">
-              Job Application
+              Careers
             </button>
 
             {/* <Link href="/chatbot" className="text-[#BFBFBF] hover:text-white">

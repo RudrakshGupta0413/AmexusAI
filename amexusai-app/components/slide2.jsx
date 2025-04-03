@@ -19,18 +19,18 @@ const firaCode = Fira_Code({
 
 const features = [
   {
-    title: "Autonomous AI Agents",
-    description: "AI that doesn't just analyze-it takes action to move your business forward.",
+    title: "Predictive Demand Sensing",
+    description: "AI analyzes 50+ data streams to anticipate market shifts before they happen",
     gif: "/slide2_image1.png",
   },
   {
-    title: "Tailored for Your Industry",
-    description: "AI tailored to your industry needs, integrating effortlessly into your workflow.",
+    title: "Self-Optimizing Inventory Management",
+    description: "Agents that balance stock levels in real-time",
     gif: "/slide2_image2.png",
   },
   {
-    title: "Fast & Easy Deployment",
-    description: "No complex setup-delpoy AI instantly and start automating from day one.",
+    title: "Autonomous Logistics Orchestration",
+    description: "AI that makes real-time shipping decisions",
     gif: "/slide2_image3.png",
   },
 ]

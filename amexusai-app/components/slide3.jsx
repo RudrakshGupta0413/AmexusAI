@@ -24,10 +24,10 @@ const Slide3 = () => {
   });
 
   const stats = [
-    { prefix: "Upto", value: 50, label: "Boost in Logistics\nEfficiency" },
-    { value: 60, label: "Faster Delivery Times" },
-    { value: 30, label: "Faster Financial\nReporting" },
-    { prefix: "Achieve", value: 25, label: "Lower Operational\nCosts" },
+    { prefix: "Upto", value: 3, label: "Faster Inventory\nTurns" },
+    { prefix: "Upto", value: 30, label: "Reduction\nLogistics Cost" },
+    { value: 40, label: "Faster Order\nFulfilment Speed" },
+    { prefix: "Upto", value: 45, label: "Forecast Accuracy" },
   ];
 
   return (
@@ -36,7 +36,7 @@ const Slide3 = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="min-h-screen bg-[#0D111D] py-8 md:py-16 px-4"
+      className="min-h-screen bg-[#0A0F1D] py-8 md:py-16 px-4"
     >
       <div className="max-w-[1350px] mx-auto text-center">
         <motion.h1
@@ -71,6 +71,7 @@ const Slide3 = () => {
                 prefix={stat.prefix}
                 targetValue={stat.value}
                 label={stat.label}
+                suffix={stat.value === 3 ? "X" : "%"} // <-- Dynamic suffix
                 className="bg-transparent"
               />
             </motion.div>
