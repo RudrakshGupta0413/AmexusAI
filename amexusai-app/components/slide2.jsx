@@ -1,26 +1,27 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { useInView } from "react-intersection-observer"
-import Image from "next/image"
-import { cn } from "@/lib/utils"
-import { Roboto_Slab, Fira_Code } from "next/font/google"
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
+import { Roboto_Slab, Fira_Code } from "next/font/google";
 
 const robotoSlab = Roboto_Slab({
   subsets: ["latin"],
   display: "swap",
-})
+});
 
 const firaCode = Fira_Code({
   subsets: ["latin"],
   display: "swap",
-})
+});
 
 const features = [
   {
     title: "Predictive Demand Sensing",
-    description: "AI analyzes 50+ data streams to anticipate market shifts before they happen",
+    description:
+      "AI analyzes 50+ data streams to anticipate market shifts before they happen",
     gif: "/slide2_image1.png",
   },
   {
@@ -33,23 +34,23 @@ const features = [
     description: "AI that makes real-time shipping decisions",
     gif: "/slide2_image3.png",
   },
-]
+];
 
 export default function Slide2() {
-  const [selectedFeature, setSelectedFeature] = useState(0)
-  const [imageLoading, setImageLoading] = useState(true)
-  const [imageError, setImageError] = useState(false)
+  const [selectedFeature, setSelectedFeature] = useState(0);
+  const [imageLoading, setImageLoading] = useState(true);
+  const [imageError, setImageError] = useState(false);
 
   const { ref, inView } = useInView({
-    triggerOnce: true, 
-    threshold: 0.3, 
-  })
+    triggerOnce: true,
+    threshold: 0.3,
+  });
 
   const handleKeyDown = (event, index) => {
     if (event.key === "Enter" || event.key === " ") {
-      setSelectedFeature(index)
+      setSelectedFeature(index);
     }
-  }
+  };
 
   return (
     <motion.div
@@ -62,12 +63,14 @@ export default function Slide2() {
       <div className="container mx-auto px-4 py-8 md:py-16 max-w-[1400px]">
         {/* Header Section */}
         <div className="text-center mb-8 md:mb-16">
-          <h1 className={`text-3xl md:text-4xl lg:text-5xl font-normal mb-4 mx-auto leading-tight md:whitespace-nowrap ${robotoSlab.className}`}>
+          <h1
+            className={`text-3xl md:text-4xl lg:text-5xl font-normal mb-4 mx-auto leading-tight md:whitespace-nowrap ${robotoSlab.className}`}
+          >
             Unlock AI&apos;s Full Potential in Your Business
           </h1>
           <p className="text-[#D2D2D2] text-base md:text-lg max-w-6xl mx-auto px-4">
-            Amexus AI&apos;s agents are designed to streamline your business operations, automate processes, and
-            enhance customer interactions
+            Amexus AI&apos;s agents are designed to streamline your business
+            operations, automate processes, and enhance customer interactions
           </p>
         </div>
 
@@ -87,15 +90,21 @@ export default function Slide2() {
                   alt={feature.title}
                   fill
                   className="object-contain"
-                  onLoadingComplete={() => setImageLoading(false)}
+                  onLoad={() => setImageLoading(false)}
                   onError={() => {
-                    setImageLoading(false)
-                    setImageError(true)
+                    setImageLoading(false);
+                    setImageError(true);
                   }}
                 />
               </div>
-              <h3 className={`text-2xl font-normal mb-3 ${robotoSlab.className}`}>{feature.title}</h3>
-              <p className="text-gray-400 text-sm max-w-md mx-auto">{feature.description}</p>
+              <h3
+                className={`text-2xl font-normal mb-3 ${robotoSlab.className}`}
+              >
+                {feature.title}
+              </h3>
+              <p className="text-gray-400 text-sm max-w-md mx-auto">
+                {feature.description}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -127,7 +136,9 @@ export default function Slide2() {
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                   className={cn(
                     "relative pl-12 cursor-pointer transition-colors duration-300",
-                    selectedFeature === index ? "opacity-100" : "opacity-60 hover:opacity-80",
+                    selectedFeature === index
+                      ? "opacity-100"
+                      : "opacity-60 hover:opacity-80",
                   )}
                   onClick={() => setSelectedFeature(index)}
                   onKeyDown={(e) => handleKeyDown(e, index)}
@@ -136,10 +147,14 @@ export default function Slide2() {
                   aria-pressed={selectedFeature === index}
                 >
                   <div className="py-6">
-                    <h3 className={`text-2xl font-bold mb-2 md:whitespace-nowrap ${robotoSlab.className}`}>
+                    <h3
+                      className={`text-2xl font-bold mb-2 md:whitespace-nowrap ${robotoSlab.className}`}
+                    >
                       {feature.title}
                     </h3>
-                    <p className="text-gray-400 leading-relaxed text-base">{feature.description}</p>
+                    <p className="text-gray-400 leading-relaxed text-base">
+                      {feature.description}
+                    </p>
                   </div>
                 </motion.div>
               ))}
@@ -178,10 +193,10 @@ export default function Slide2() {
                       alt={features[selectedFeature].title}
                       fill
                       className="object-contain"
-                      onLoadingComplete={() => setImageLoading(false)}
+                      onLoad={() => setImageLoading(false)}
                       onError={() => {
-                        setImageLoading(false)
-                        setImageError(true)
+                        setImageLoading(false);
+                        setImageError(true);
                       }}
                     />
                   )}
@@ -192,5 +207,5 @@ export default function Slide2() {
         </div>
       </div>
     </motion.div>
-  )
+  );
 }

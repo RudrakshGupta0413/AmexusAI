@@ -1,6 +1,5 @@
 "use client";
 
-import { getCLS, getFID, getLCP } from "web-vitals";
 import { AnimatedStat } from "./animatedstat";
 import { Roboto_Slab, Fira_Code } from "next/font/google";
 import { Button } from "./ui/button";

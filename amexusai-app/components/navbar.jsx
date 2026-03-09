@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
@@ -12,13 +11,13 @@ export default function Navbar() {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false); 
+      setIsOpen(false);
     }
   };
 
   const openJobApplicationForm = () => {
     window.open("https://forms.gle/CPMNhXzp6kugWkMa9", "_blank");
-    setIsOpen(false)
+    setIsOpen(false);
   };
 
   return (
@@ -32,23 +31,38 @@ export default function Navbar() {
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <button onClick={() => handleScroll("solution")} className="text-[#BFBFBF] hover:text-white">
+            <button
+              onClick={() => handleScroll("solution")}
+              className="text-[#BFBFBF] hover:text-white"
+            >
               Solution
             </button>
-            <button onClick={() => handleScroll("team")} className="text-[#BFBFBF] hover:text-white">
+            <button
+              onClick={() => handleScroll("team")}
+              className="text-[#BFBFBF] hover:text-white"
+            >
               Our Team
             </button>
-            <button onClick={() => handleScroll("contact")} className="text-[#BFBFBF] hover:text-white">
+            <button
+              onClick={() => handleScroll("contact")}
+              className="text-[#BFBFBF] hover:text-white"
+            >
               Contact Us
             </button>
 
-             {/* Connect FAQ once all the pages are merger */ }
-            <button onClick={() => handleScroll("#")} className="text-[#BFBFBF] hover:text-white">
+            {/* Connect FAQ once all the pages are merger */}
+            <button
+              onClick={() => handleScroll("#")}
+              className="text-[#BFBFBF] hover:text-white"
+            >
               FAQ
             </button>
 
-             {/* New Job Application Button */}
-            <button onClick={openJobApplicationForm} className="text-[#BFBFBF] hover:text-white">
+            {/* New Job Application Button */}
+            <button
+              onClick={openJobApplicationForm}
+              className="text-[#BFBFBF] hover:text-white"
+            >
               Careers
             </button>
 
@@ -73,22 +87,37 @@ export default function Navbar() {
       {/* Mobile Menu Dropdown */}
       {isOpen && (
         <div className="md:hidden bg-[#0A0F1D] w-full py-4 px-6 absolute top-16 left-0 flex flex-col items-center space-y-6 shadow-md">
-          <button onClick={() => handleScroll("solution")} className="block text-[#BFBFBF] hover:text-white">
+          <button
+            onClick={() => handleScroll("solution")}
+            className="block text-[#BFBFBF] hover:text-white"
+          >
             Solution
           </button>
-          <button onClick={() => handleScroll("team")} className="block text-[#BFBFBF] hover:text-white">
+          <button
+            onClick={() => handleScroll("team")}
+            className="block text-[#BFBFBF] hover:text-white"
+          >
             Our Team
           </button>
-          <button onClick={() => handleScroll("contact")} className="block text-[#BFBFBF] hover:text-white">
+          <button
+            onClick={() => handleScroll("contact")}
+            className="block text-[#BFBFBF] hover:text-white"
+          >
             Contact Us
           </button>
 
-          {/* Connect FAQ once all the pages are merger */ }
-          <button onClick={() => handleScroll("faq")} className="block text-[#BFBFBF] hover:text-white">
+          {/* Connect FAQ once all the pages are merger */}
+          <button
+            onClick={() => handleScroll("faq")}
+            className="block text-[#BFBFBF] hover:text-white"
+          >
             FAQ
           </button>
           {/* New Job Application Button for mobile */}
-          <button onClick={openJobApplicationForm} className="block text-[#BFBFBF] hover:text-white">
+          <button
+            onClick={openJobApplicationForm}
+            className="block text-[#BFBFBF] hover:text-white"
+          >
             Job Application
           </button>
         </div>
