@@ -41,14 +41,23 @@ export default function HeroSection() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
           className="max-w-screen mx-auto text-base sm:text-md lg:text-2xl text-[#9A9A9A] mb-12 text-center tracking-[0.01em] font-mono"
         >
-          Transform your business with intelligent AI systems that automate
-          workflows,
+          Transform your business with intelligent AI systems that automate workflows, 
           <br />
-          enhance decision-making, and unlock new efficiencies across
-          operations, customer experience, analytics, and beyond.
+          enhance decision-making, and unlock new efficiencies across operations, customer experience, analytics, and beyond.
         </motion.p>
 
-        {/* Book Demo Button Removed */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+          className="flex justify-center"
+        >
+          <Link href="/booking">
+            <Button className="bg-gradient-to-r from-[#4CAF50] to-[#A4D03C] hover:opacity-90 text-white rounded-xl px-6 py-6 text-lg flex items-center justify-center">
+              Book Demo <ArrowRight className="ml-2 h-6 w-6" />
+            </Button>
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

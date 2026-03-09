@@ -77,7 +77,18 @@ const Slide3 = () => {
           ))}
         </div>
 
-        {/* Book Demo Button Removed */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={inView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="mt-8 md:mt-16 flex justify-center w-full"
+        >
+          <Link href="/booking">
+            <Button className="bg-gradient-to-r from-[#4CAF50] to-[#A4D03C] hover:opacity-90 text-white rounded-xl px-6 py-6 text-lg flex items-center justify-center">
+              Book Demo <ArrowRight className="ml-2 h-6 w-6" />
+            </Button>
+          </Link>
+        </motion.div>
       </div>
 
       <ComingSoonPopup
