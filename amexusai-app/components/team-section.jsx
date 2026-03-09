@@ -9,7 +9,7 @@ export default function TeamSection() {
     {
       name: "Amit Gurawa",
       position: "Founder",
-      image: "/Amit_Profile.png",
+      image: "/Amit_Profile_01.jpeg",
       alumni: "IIT-BHU, Varanasi Alumni",
       experience: ["Microsoft", "Qualcomm", "Samsung"],
       gradient: "bg-gradient-to-l from-[#364011] to-[#2b4835]",

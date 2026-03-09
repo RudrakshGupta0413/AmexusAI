@@ -26,7 +26,13 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo on the Left */}
           <a href="/">
-            <Image src="/Logo.png" width={150} height={50} alt="Amexus AI" />
+            <Image
+              src="/Logo.png"
+              width={150}
+              height={50}
+              alt="Amexus AI"
+              priority
+            />
           </a>
 
           {/* Desktop Navigation Links */}

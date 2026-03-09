@@ -18,7 +18,7 @@ export default function WorkingSection() {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     observer.observe(sectionRef.current);
@@ -48,6 +48,7 @@ export default function WorkingSection() {
               alt="Health Care Solutions"
               width={1200}
               height={800}
+              priority
               className="w-full rounded-lg shadow-2xl object-cover transition-all duration-300"
             />
           </div>
