@@ -38,13 +38,7 @@ export default function ContactSection() {
             <p className="text-lg sm:text-xl text-[#9A9A9A] mb-8 tracking-wide">
               We're excited to help you leverage AI for your business.
             </p>
-            <div className="flex justify-center md:justify-start">
-              <Link href="/booking">
-                <Button className="bg-gradient-to-r from-[#4CAF50] to-[#A4D03C] hover:opacity-90 text-white rounded-xl px-6 py-6 text-lg flex items-center justify-center">
-                  Book Demo <ArrowRight className="ml-2 h-6 w-6" />
-                </Button>
-              </Link>
-            </div>
+            {/* Book Demo Button Removed */}
           </div>
 
           {/* Desktop: Image on Right */}
