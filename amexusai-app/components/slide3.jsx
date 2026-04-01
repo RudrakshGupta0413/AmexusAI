@@ -23,10 +23,10 @@ const Slide3 = () => {
   });
 
   const stats = [
-    { prefix: "Upto", value: 3, label: "Faster Inventory\nTurns" },
-    { prefix: "Upto", value: 30, label: "Reduction\nLogistics Cost" },
-    { value: 40, label: "Faster Order\nFulfilment Speed" },
-    { prefix: "Upto", value: 45, label: "Forecast Accuracy" },
+    { prefix: "Upto", value: 3, label: "Faster Workflows" },
+    { prefix: "Upto", value: 30, label: "Reduction in Operational Costs" },
+    { prefix: "Upto", value: 40, label: "Faster Process Execution" },
+    { prefix: "Upto", value: 45, label: "Improved Decision Making" },
   ];
 
   return (
@@ -44,8 +44,7 @@ const Slide3 = () => {
           transition={{ duration: 0.6 }}
           className={`text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-3 md:mb-4 ${robotoSlab.className}`}
         >
-          Achieve Tangible Results
-          <br className="hidden sm:block" /> with Amexus AI
+          Drive Measurable Impact with AI
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: -20 }}
@@ -53,8 +52,8 @@ const Slide3 = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-base md:text-lg lg:text-xl text-[#9A9A9A] mb-8 md:mb-16 font-mono max-w-6xl mx-auto"
         >
-          Let Amexus AI optimize your processes and help your business grow
-          faster.
+          Empower your business with AI-driven solutions that deliver real results<br />
+          across operations, efficiency, and decision-making.
         </motion.p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 w-full max-w-[1400px] mx-auto">

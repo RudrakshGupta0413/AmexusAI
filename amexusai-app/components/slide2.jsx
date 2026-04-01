@@ -19,19 +19,19 @@ const firaCode = Fira_Code({
 
 const features = [
   {
-    title: "Predictive Demand Sensing",
+    title: "Autonomous AI Agents for Business Operations",
     description:
-      "AI analyzes 50+ data streams to anticipate market shifts before they happen",
+      "AI agents that manage tasks, workflows, and decisions independently.",
     gif: "/slide2_image1.png",
   },
   {
-    title: "Self-Optimizing Inventory Management",
-    description: "Agents that balance stock levels in real-time",
+    title: "Predictive Intelligence for Smarter Decisions",
+    description: "Forecast trends, detect risks, and gain actionable insights with AI.",
     gif: "/slide2_image2.png",
   },
   {
-    title: "Autonomous Logistics Orchestration",
-    description: "AI that makes real-time shipping decisions",
+    title: "Scalable AI Solutions for Every Industry",
+    description: "Flexible AI systems that grow and integrate with your business.",
     gif: "/slide2_image3.png",
   },
 ];
@@ -66,11 +66,11 @@ export default function Slide2() {
           <h1
             className={`text-3xl md:text-4xl lg:text-5xl font-normal mb-4 mx-auto leading-tight md:whitespace-nowrap ${robotoSlab.className}`}
           >
-            Unlock AI&apos;s Full Potential in Your Business
+            Unlock the Full Potential of AI in Your Business
           </h1>
           <p className="text-[#D2D2D2] text-base md:text-lg max-w-6xl mx-auto px-4">
-            Amexus AI&apos;s agents are designed to streamline your business
-            operations, automate processes, and enhance customer interactions
+            Amexus AI builds intelligent, agent-driven systems that automate workflows,
+            optimize <br /> decisions, and enhance customer experiences across every industry.
           </p>
         </div>
 

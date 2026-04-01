@@ -31,7 +31,7 @@ export default function TeamMemberCard({ name, position, image, alumni, experien
       <div className="flex justify-center items-center gap-2 mt-2 text-white text-md sm:text-sm xs:flex-col">
         Ex - 
         {experience.includes("Microsoft") && (
-          <Image src="/Microsoft-Logo.png" alt="Microsoft" width={70} height={14} />
+          <Image src="/Image.png" alt="Microsoft" width={70} height={14} />
         )}
         {experience.includes("Qualcomm") && (
           <Image src="/Qualcomm-Logo.png" alt="Qualcomm" width={60} height={14} />
