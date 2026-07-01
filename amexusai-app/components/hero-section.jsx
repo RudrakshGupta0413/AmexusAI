@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { interiorCostEstimatorUrl } from "@/lib/utils";
 
 export default function HeroSection() {
   const [showAnimation, setShowAnimation] = useState(false);
@@ -57,7 +58,7 @@ export default function HeroSection() {
               Book Demo <ArrowRight className="ml-2 h-6 w-6" />
             </Button>
           </Link>
-          <a href="https://tanstack-start-app.ai-agent-demo.workers.dev/" target="_blank" rel="noopener noreferrer">
+          <a href={interiorCostEstimatorUrl} target="_blank" rel="noopener noreferrer">
             <Button className="bg-gradient-to-r from-[#4CAF50] to-[#A4D03C] hover:opacity-90 text-white rounded-xl px-6 py-6 text-lg flex items-center justify-center">
               Interior cost estimator Agent <ArrowRight className="ml-2 h-6 w-6" />
             </Button>

@@ -9,6 +9,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
+import { interiorCostEstimatorUrl } from "@/lib/utils";
 
 const robotoSlab = Roboto_Slab({
   subsets: ["latin"],
@@ -87,7 +88,7 @@ const Slide3 = () => {
               Book Demo <ArrowRight className="ml-2 h-6 w-6" />
             </Button>
           </Link>
-          <a href="https://tanstack-start-app.ai-agent-demo.workers.dev/" target="_blank" rel="noopener noreferrer">
+          <a href={interiorCostEstimatorUrl} target="_blank" rel="noopener noreferrer">
             <Button className="bg-gradient-to-r from-[#4CAF50] to-[#A4D03C] hover:opacity-90 text-white rounded-xl px-6 py-6 text-lg flex items-center justify-center">
               Interior cost estimator Agent <ArrowRight className="ml-2 h-6 w-6" />
             </Button>
